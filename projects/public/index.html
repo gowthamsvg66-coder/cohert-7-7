@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Drinking Reminder</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+
+        <h1>💧 Water Drinking Reminder</h1>
+
+        <p>Stay Healthy • Stay Hydrated</p>
+
+    </div>
+
+    <!-- Dashboard -->
+
+    <div class="dashboard">
+
+        <div class="card">
+
+            <h3>Today's Goal</h3>
+
+            <h2 id="goal">3000 ml</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Today's Intake</h3>
+
+            <h2 id="totalWater">0 ml</h2>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Reminder</h3>
+
+            <h2 id="currentReminder">30 min</h2>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Progress -->
+
+    <div class="progress-card">
+
+        <h3>Daily Progress</h3>
+
+        <div class="progress">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+        <h2 id="percentage">0%</h2>
+
+    </div>
+
+
+
+    <!-- Add Water -->
+
+    <div class="card add-water">
+
+        <h2>Add Water Intake</h2>
+
+        <input
+            type="number"
+            id="waterAmount"
+            placeholder="Enter Water (ml)"
+        >
+
+        <button id="addBtn">
+
+            Add Water
+
+        </button>
+
+    </div>
+
+
+
+    <!-- Reminder -->
+
+    <div class="card">
+
+        <h2>Reminder Settings</h2>
+
+        <select id="interval">
+
+            <option value="30">
+
+                Every 30 Minutes
+
+            </option>
+
+            <option value="60">
+
+                Every 1 Hour
+
+            </option>
+
+            <option value="90">
+
+                Every 1.5 Hours
+
+            </option>
+
+            <option value="120">
+
+                Every 2 Hours
+
+            </option>
+
+        </select>
+
+        <input
+            type="number"
+            id="goalInput"
+            placeholder="Daily Goal (ml)"
+            value="3000"
+        >
+
+        <button id="saveSettings">
+
+            Save Settings
+
+        </button>
+
+    </div>
+
+
+
+    <!-- Today's History -->
+
+    <div class="history">
+
+        <div class="history-title">
+
+            Today's Water Intake
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Amount</th>
+
+                    <th>Time</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="historyTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- Notification Popup -->
+
+<div id="notification" class="notification">
+
+    💧 Time to Drink Water!
+</div>
+<script src="script.js"></script>
+</body>
+</html>
